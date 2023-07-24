@@ -2,7 +2,7 @@ Baigiamasis darbas
 
 
 Description
-TrustyTails is a web application that provides pet services, allowing users to reserve time for their pets and choose from a variety of pet services offered. Users can create an account, view available services, and make reservations for their pets.
+TrustyTails is a web application that provides pet services, allowing users to reserve time for their pets and choose from various pet services. Users can create an account, view available services, and make reservations for their pets.
 
 Table of Contents
 Installation
@@ -27,7 +27,7 @@ $ python manage.py migrate
 Run the development server:
 $ python manage.py runserver
 
-Access the application in your web browser at http://127.0.0.1:8000/.
+You can access the application in your web browser at http://127.0.0.1:8000/.
 
 Usage
 
@@ -47,7 +47,7 @@ Email Confirmation: Send a confirmation email to users after making a reservatio
 Technologies
 Django: Web framework used for building the application.
 Django Rest Framework: For creating RESTful APIs.
-SQLlite: Database management system for storing data.
-HTML, CSS: Frontend technologies for the user interface.
+SQLlite: A database management system for storing data.
+HTML, CSS, JAVASCRIPT: Frontend technologies for the user interface.
 Decouple: For managing environment variables.
 
