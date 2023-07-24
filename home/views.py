@@ -88,7 +88,6 @@ def reservetime(request):
             services_ids = form.cleaned_data['services']
 
             time = datetime.strptime(time_choice, '%H:%M').time()
-
             reserved_time = datetime.combine(date, time)
 
             services = PetService.objects.filter(pk__in=services_ids)
