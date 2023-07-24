@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <link rel="stylesheet" type="text/css" href="{% static 'static/forms.css' %}">
+
+<div class="center">
+    <form method="POST" enctype="multipart/form-data" class="card">
+        {% csrf_token %}
+        <h2 class="text-center">{{ user.username | title }}</h2>
+        <p class="text-center"><a href="mailto:{{ user.email }}">{{ user.email }}</a></p>
+        <hr>
+
+        <h3>Reservations:</h3>
+        <ul>
+            {% for reservation in reservations %}
+            <li>
+                Date: {{ reservation.reserved_time.date }}
+                Time: {{ reservation.reserved_time.time }}
+                Service: {{ reservation.get_services_names }}
+            </li>
+            {% endfor %}
+        </ul>
+    </form>
+</div>
+{% endblock content %}

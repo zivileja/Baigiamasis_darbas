@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <link rel="stylesheet" type="text/css" href="{% static 'static/home.css' %}">
+
+  {% if about_content %}
+    <div class="box">
+      <h2>{{ about_content.title }}</h2>
+      <p>{{ about_content.description }}</p>
+    </div>
+  {% endif %}
+
+  <div class="boxes-container">
+    <div class="box small-box">
+      <a href="{% url 'home:reservetime' %}">Reserve time</a>
+    </div>
+
+    <div class="box small-box">
+      <a href="{% url 'home:services' %}">Our services</a>
+    </div>
+  </div>
+
+<style>
+.box {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+
+.boxes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.small-box {
+  width: 48%;
+}
+</style>
+
+{% endblock %}

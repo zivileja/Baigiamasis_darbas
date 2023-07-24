@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'static/forms.css' %}">
+  </head>
+  <h1>Reservation has been confirm</h1>
+  <h2>Reservation Details:</h2>
+  <p>Date: {{ reservation.reserved_time.date }}</p>
+  <p>Time: {{ reservation.reserved_time.time }}</p>
+  <p>Service: {{ reservation.get_services_names }}</p>
+{% endblock %}
