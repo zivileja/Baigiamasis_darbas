@@ -1,5 +1,4 @@
-Baigiamasis darbas
-
+Final project 
 
 Description
 TrustyTails is a web application that provides pet services, allowing users to reserve time for their pets and choose from various pet services. Users can create an account, view available services, and make reservations for their pets.
